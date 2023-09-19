@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.total {
+    height: 100vh;
+    width: 100vw;
+    background-color: #89C15E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upper {
+    width: 63rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.text-section {
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.details {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.details p {
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.score {
+    display: flex;
+    text-align: center;
+}
+
+.computer-score {
+    height: 8.5rem;
+    width: 9rem;
+    background-color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+
+
+.your-score {
+    height: 8.5rem;
+    width: 9rem;
+    background-color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.score span {
+    font-size: 3.3rem;
+    font-weight: bold;
+}
+
+.score p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #656565;
+    margin-bottom: 5px;
+}
+
+.image-section {
+    margin-top: 7rem;
+    display: flex;
+}
+
+.image-section .image {
+    width: 7rem;
+    height: 7rem;
+    background-color: aqua;
+    margin-right: 3rem;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: -1px 1px 11px 0px #00000059;
+}
+
+.image-section .image img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.image-section .image:hover {
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: aquamarine;
+    transition: all;
+    transition-duration: 0.3s;
+    box-shadow: -1px 1px 11px 0px white;
+}
+
+.image-section .image:hover img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.button-section {
+    display: flex;
+    position: absolute;
+    top: 40.5rem;
+    left: 80rem;
+}
+
+.rules,
+.next {
+    width: 6.5rem;
+    height: 2.4rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-right: 1rem;
+}
+
+.rules:hover,
+.next:hover {
+    background-color: white;
+    color: #656565;
+    cursor: pointer;
+}
+
+.rule-details {
+    width: 20rem;
+    height: 23rem;
+    border: 5px solid white;
+    border-radius: 14px;
+    background-color: #004429;
+    color: white;
+    position: relative;
+    left: 35rem;
+    top: -10rem;
+}
+
+.rule-details .close-button {
+    width: 3.1rem;
+    height: 3.1rem;
+    border: 6px solid white;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF0000;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 18.3rem;
+    top: -2rem;
+}
+
+.close-button:hover {
+    border: 2px solid white;
+    background-color: #dd0303;
+}
+
+
+.rule-details p {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.rule-details li {
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    list-style: none;
+    padding-right: 2rem;
+}
+
+.rule-details li img {
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+}
+
+.win-loss {
+    width: 40rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-result,
+.computer-result {
+    width: 6rem;
+    height: 6rem;
+    background-color: aqua;
+    margin-right: 2rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myself {
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: white;
+    margin: 0;
+}
+
+.opponent {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2.9px;
+    color: white;
+    margin: 0;
+}
+
+.play-again,
+.replay {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: #656565;
+    background-color: white;
+    width: 11rem;
+    height: 2.8rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.win-page {
+    background-color: #89C15E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stars {
+    position: absolute;
+    top: 3rem;
+    z-index: 2;
+}
+
+.trophy {
+    position: absolute;
+    top: 12rem;
+    z-index: 1;
+}
+
+.win-page h1 {
+    position: absolute;
+    top: 22rem;
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 8px;
+}
+
+.win-page h4 {
+    position: absolute;
+    top: 27rem;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 6px;
+}
+
+.play-again2 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: #656565;
+    background-color: white;
+    width: 11rem;
+    height: 2.8rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 37rem;
+    cursor: pointer;
+}
+
+.play-again2:hover {
+    background-color: #89C15E;
+    color: white;
+    border: 2px solid white;
+    border-radius: 13px;
+}
