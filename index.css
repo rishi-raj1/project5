@@ -147,15 +147,15 @@ body {
 }
 
 .rule-details {
-    width: 20rem;
-    height: 23rem;
+    width: 18rem;
+    height: 21rem;
     border: 5px solid white;
     border-radius: 14px;
     background-color: #004429;
     color: white;
-    position: relative;
-    left: 35rem;
-    top: -10rem;
+    position: absolute;
+    left: 75rem;
+    top: 18rem;
 }
 
 .rule-details .close-button {
@@ -171,7 +171,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     position: absolute;
-    left: 18.3rem;
+    left: 16rem;
     top: -2rem;
 }
 
@@ -205,19 +205,20 @@ body {
     width: 40rem;
     display: flex;
     justify-content: space-between;
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 .my-result,
 .computer-result {
-    width: 6rem;
-    height: 6rem;
+    width: 10rem;
+    height: 10rem;
     background-color: aqua;
     margin-right: 2rem;
     border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: -1px 1px 11px 0px #00000059;
 }
 
 .final-statement {
@@ -225,6 +226,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 2.8rem;
 }
 
 .myself {
