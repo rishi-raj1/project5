@@ -40,6 +40,10 @@ if (localStorage.getItem('your-score') == null) {
 }
 
 
+computerScore.innerText = JSON.parse(localStorage.getItem('computer-score'));
+yourScore.innerText = JSON.parse(localStorage.getItem('your-score'));
+
+
 
 function Hide() {
     playAgainBtn.style.display = 'none';
@@ -64,13 +68,14 @@ function closeRules() {
     ruleDetails.style.display = 'none';
 }
 
+
 rules.addEventListener('click', (e) => showRules(e));
 closeButton.addEventListener('click', (e) => closeRules(e));
 
 
 
 function imageClick(item) {
-    winLoss.style.display = 'block';
+    winLoss.style.display = 'flex';
     imageSection.style.display = 'none';
 
     const itemsArr = ['rock', 'scissor', 'paper'];
@@ -87,13 +92,14 @@ function imageClick(item) {
             mySelf.innerText = "TIE UP";
             opponent.style.display = 'none';
 
-            replay.style.display = 'block';
+            replay.style.display = 'flex';
         }
         else if (computerSelected == 'paper') {
             computerResult.innerHTML = '<img src="paper.png" alt="paper-image" />'
             mySelf.innerText = "YOU LOST";
+            opponent.style.display = 'block';
 
-            playAgainBtn.style.display = 'block';
+            playAgainBtn.style.display = 'flex';
 
             let compScore = JSON.parse(localStorage.getItem('computer-score'));
             compScore++;
@@ -103,8 +109,9 @@ function imageClick(item) {
         else if (computerSelected == 'scissor') {
             computerResult.innerHTML = '<img src="scissor.png" alt="scissor-image" />'
             mySelf.innerText = "YOU WIN";
+            opponent.style.display = 'block';
 
-            playAgainBtn.style.display = 'block';
+            playAgainBtn.style.display = 'flex';
 
             let youScore = JSON.parse(localStorage.getItem('your-score'));
             youScore++;
@@ -117,8 +124,9 @@ function imageClick(item) {
         if (computerSelected == 'rock') {
             computerResult.innerHTML = '<img src="rock.png" alt="rock-image" />'
             mySelf.innerText = "YOU WIN";
+            opponent.style.display = 'block';
 
-            playAgainBtn.style.display = 'block';
+            playAgainBtn.style.display = 'flex';
 
             let youScore = JSON.parse(localStorage.getItem('your-score'));
             youScore++;
@@ -129,13 +137,14 @@ function imageClick(item) {
             mySelf.innerText = "TIE UP"
             opponent.style.display = 'none';
 
-            replay.style.display = 'block';
+            replay.style.display = 'flex';
         }
         else if (computerSelected == 'scissor') {
             computerResult.innerHTML = '<img src="scissor.png" alt="scissor-image" />'
             mySelf.innerText = "YOU LOST";
+            opponent.style.display = 'block';
 
-            playAgainBtn.style.display = 'block';
+            playAgainBtn.style.display = 'flex';
 
             let compScore = JSON.parse(localStorage.getItem('computer-score'));
             compScore++;
@@ -148,8 +157,9 @@ function imageClick(item) {
         if (computerSelected == 'rock') {
             computerResult.innerHTML = '<img src="rock.png" alt="rock-image" />'
             mySelf.innerText = "YOU LOST";
+            opponent.style.display = 'block';
 
-            playAgainBtn.style.display = 'block';
+            playAgainBtn.style.display = 'flex';
 
             let compScore = JSON.parse(localStorage.getItem('computer-score'));
             compScore++;
@@ -158,8 +168,9 @@ function imageClick(item) {
         else if (computerSelected == 'paper') {
             computerResult.innerHTML = '<img src="paper.png" alt="paper-image" />'
             mySelf.innerText = "YOU WIN";
+            opponent.style.display = 'block';
 
-            playAgainBtn.style.display = 'block';
+            playAgainBtn.style.display = 'flex';
 
             let youScore = JSON.parse(localStorage.getItem('your-score'));
             youScore++;
@@ -170,7 +181,7 @@ function imageClick(item) {
             mySelf.innerText = "TIE UP";
             opponent.style.display = 'none';
 
-            replay.style.display = 'block';
+            replay.style.display = 'flex';
         }
     }
 
@@ -182,6 +193,22 @@ for (let i = 0; i < images.length; i++) {
     images[i].addEventListener('click', (e) => imageClick(images[i]));
 }
 
+
+function playAgainFunc() {
+    winLoss.style.display = 'none';
+    imageSection.style.display = 'flex';
+    playAgainBtn.style.display = 'none';
+}
+
+playAgainBtn.addEventListener('click', () => playAgainFunc());
+
+function replayFunc() {
+    winLoss.style.display = 'none';
+    imageSection.style.display = 'flex';
+    replay.style.display = 'none';
+}
+
+replay.addEventListener('click', () => replayFunc());
 
 
 
